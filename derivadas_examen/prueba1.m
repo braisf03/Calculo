@@ -5,14 +5,14 @@ pkg load symbolic
 syms x;
 
 f=x^3/(x-1)^2;
-%calculo dominio para asintota vertical
+
 dom=solve((x-1)^2)
 
-%apartado A(a grafica esta mais abaixo)
+%a
 df1=diff(f,x,1)%calcula a primeira derivada
 df2=diff(f,x,2)%calcula a segunda derivada
 
-%apartado B
+%b
 %puntos criticos
 disp('Calculo de puntos criticos');
 pr=solve(df2)
@@ -20,7 +20,7 @@ double(subs(df2,sym('0')))
 %punto de inflexion
 posible_punto_inflexion = solve(df2==0,x)
 
-%apartado C
+%c
 % Asintotas horizontales
 asintota_horizontal = limit(f,x,inf) % Comprobamos os limites laterais. Todos tenhen que dar o mesmo valor finito
 asintota_horizontal1 = limit(f,x,inf, 'right')
@@ -40,10 +40,10 @@ m = limit(f/x,x,inf);
 n = limit(f-m*x,x,inf);
 asintota_oblicua = m*x + n
 
-%apartado D
+%d
 p6=taylor(f,x,0, 'order', 7)
 
-%grafica apartado A-D
+%a-d
 ezplot(f)
 hold on;
 plot([-8,8],[0,0], 'k')%eixe x
