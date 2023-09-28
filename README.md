@@ -1,6 +1,3 @@
-# Calculo-UDC
+# Cálculo
 
-Proba Derivacion : 8.5
-
-Proba Integracion : 7.0
-
+Prácticas Cálculo (curso 2021/22)
