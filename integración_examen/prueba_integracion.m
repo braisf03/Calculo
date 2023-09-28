@@ -1,4 +1,4 @@
-%Oscar Olveira Miniño/3.1
+
 1;
 close all;
 clc;
