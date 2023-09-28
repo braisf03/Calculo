@@ -4,21 +4,21 @@ close all;
 clc;
 pkg load symbolic
 syms x;
-%apartado a
+%a
 %1=(x^2/4^2)+(y^2/2^2)
 y=sqrt((1-(x^2/4^2))*2^2);
 a=4;
 b=2;
 A=int(y,x,b,a)
 
-%apartado b
+%b
 
 
-%apartado c
+%c
 j=y^2
 V=pi*(int(j,x,b,a))
 
-%apartado d
+%d
 function i=trapecioC(r,f)
   n=length(r);
   h=(r(n)-r(1))/(n-1);
@@ -30,7 +30,7 @@ function i=trapecioC(r,f)
   i=sum(w .*f);
 endfunction
 
-n=20;%canto mais aumentemos o intervalo mais aproximado sale a integral
+n=20;
 r=linspace(2, 4, n+1);
 f=sqrt((1-(r.^2/4^2))*2^2);
 fprintf("Valor da integral aproximada trapecio composto: %f\n", trapecioC(r,f));
